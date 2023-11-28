@@ -99,7 +99,7 @@ rspec
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Authors <a name="author"></a>
+## 👥 Authors <a name='authors'></a>
 
 👤 **Sadaf Daneshgar**
 
@@ -110,7 +110,7 @@ rspec
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Future Features <a name="key-features"></a>
+## 🔭 Future Features <a name='future-features'></a>
 
 - [ ]  Validations and Model specs.
 - [ ]  Add more features to the app.
