@@ -65,7 +65,7 @@ git clone https://github.com/sadaf-Daneshgar/blogapp.git
 2. To access the project directory
 
 ```bash
-cd rails-blog-app
+cd rail-blog-app
 ```
 ### Install
 
