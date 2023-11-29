@@ -3,6 +3,18 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 
+  # title must not be blank
+  validates :title, presence: true
+
+  # title must not exceed 250 characters
+  validates :title, length: { maximum: 250 }
+
+  # CommentsCounter must be an integer greater than or equal to zero
+  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  # LikesCounter must be an integer greater than or equal to zero
+  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   def five_most_recent_comments
     comments.order(created_at: :desc).limit(5)
   end
