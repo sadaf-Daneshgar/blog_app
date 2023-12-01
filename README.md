@@ -15,7 +15,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Rail-blog-app<a name="about-project"></a>
+# 📖 Rail Blog App <a name="about-project"></a>
 
 **Rail-blog-app**: Is a blog app built with Ruby on Rails. It allows users to create articles and comment on them. It also allows users to sign up and sign in to the app.
 
