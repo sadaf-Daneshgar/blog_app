@@ -40,6 +40,7 @@
 - **Functional website**
 - **Unit testing**
 - **Database**
+- **Authentication**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
