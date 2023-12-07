@@ -1,20 +1,15 @@
-<h1>Best Quotes😍</h1>
 <div class="container">
   <div class="post">
-    <h2>Post #<%= @post.id %> by 
-      <%= link_to @post.user.name, user_path(@post.user) %>
-    </h2>
-    <p>Comments: <%= @post.comments.count %></p>
-    <p>Likes: <%= @post.likes.count %></p>
+    <h4>Post <%= @post.title %></h4>
+    <p class="count">Comments: <%= @post.comments.count %> | Likes: <%= @post.likes.count %></p>
     <p><%= @post.text %></p>
   </div>
-    <div class="comments">
-        <h2>Comments</h2>
-        <% @post.comments.each do |comment| %>
-            <div class="comment">
-            <p><%= comment.text %></p>
-            <p>By: <%= link_to comment.user.name, user_path(comment.user) %></p>
-            </div>
-        <% end %>
-    </div>
+
+  <div class="comments">
+    <% @post.comments.each do |comment| %>
+      <div class="comment">
+        <p><%= comment.author.name %>: <%= comment.text %></p>
+      </div>
+    <% end %>
+  </div>
 </div>

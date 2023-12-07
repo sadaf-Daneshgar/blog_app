@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  before_validation :set_default_counters
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   has_many :likes
   has_many :comments
@@ -22,6 +23,11 @@ class Post < ApplicationRecord
   after_save :update_posts_counter
 
   private
+
+  def set_default_counters
+    self.comments_counter ||= 0
+    self.likes_counter ||= 0
+  end
 
   def update_posts_counter
     author.update(posts_counter: author.posts.count)
