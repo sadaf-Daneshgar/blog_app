@@ -5,8 +5,8 @@
     <%= image_tag user.photo, alt: "User Photo", class: "user-photo"%>
   </div>
   <div class="user">
-    <h2><%= link_to user.name, user_path(user) %></h2>
-    <p><strong>Number of Posts:</strong> <%= user.posts.count %></p>
+    <h2>👤<%= link_to user.name, user_path(user) %></h2>
+    <p><strong>Number of Posts:📝</strong> <%= user.posts.count %></p>
   </div>
   </div>
 <% end %>
