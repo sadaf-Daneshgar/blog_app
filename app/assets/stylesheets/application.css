@@ -23,7 +23,7 @@ body {
   display: flex;
   border: 2px solid #333;
   padding: 20px;
-  width: 20rem;
+  width: 21rem;
   margin: 10px;
 }
 
@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-  color: #2980b9;
+  color: #b92929;
 }
 
 .user p {
@@ -90,4 +90,8 @@ a:hover {
   width: 27.5rem;
   padding: 10px;
   text-align: start;
+}
+
+.inputs {
+  margin: 2px 10px;
 }
