@@ -1,19 +1,24 @@
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [� Table of Contents](#-table-of-contents)
+- [📖 Rail Blog App ](#-rail-blog-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Run the seeder](#run-the-seeder)
+    - [Run the App](#run-the-app)
+    - [Run Test](#run-test)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+    - [Contributions, issues, and feature requests are welcome!](#contributions-issues-and-feature-requests-are-welcome)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 # 📖 Rail Blog App <a name="about-project"></a>
 
@@ -49,14 +54,15 @@
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
+
 > You need the following tools be installed in your computer:
 
 > - [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
 > - [Ruby](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md)
 > - [Rails](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm)
 
-
 ### Setup
+
 1. Download the `Zip` file or **Clone the repo with**:
 
 ```bash
@@ -68,6 +74,7 @@ git clone https://github.com/sadaf-Daneshgar/blogapp.git
 ```bash
 cd rail-blog-app
 ```
+
 ### Install
 
 ```bash
@@ -90,13 +97,14 @@ rails s
 ```
 Check http://localhost:3000/ in your browser
 ```
+
 ### Run Test
 
 - To run models tests
+
 ```bash
 rspec
 ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,18 +118,22 @@ rspec
 
 👤 **Second Authors**
 
+👤 **Mohamed Sabry**
+
+- GitHub: [@mohamedSabry0](https://github.com/mohamedSabry0)
+- Twitter: [@mohsmh0](https://twitter.com/mohsmh0)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-sabry0/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name='future-features'></a>
 
-- [ ]  Validations and Model specs.
-- [ ]  Add more features to the app.
-- [ ]  Add more tests.
-- [ ]  Add more styling.
+- [ ] Validations and Model specs.
 - [ ] Add more features to the app.
-- [ ]  Add more tests.
-
-
+- [ ] Add more tests.
+- [ ] Add more styling.
+- [ ] Add more features to the app.
+- [ ] Add more tests.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +154,7 @@ If you like this project, kindly drop a start ⭐️ for the [repository](https:
 
 **I would like to thank the following individuals and organizations for their contribution to this project.**
 
-- I would like to express my heartfelt gratitude to [**Microvere**](https://www.microverse.org/?grsf=mohammad-a-nbtazu) for the invaluable learning experience they have provided. 
+- I would like to express my heartfelt gratitude to [**Microvere**](https://www.microverse.org/?grsf=mohammad-a-nbtazu) for the invaluable learning experience they have provided.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
