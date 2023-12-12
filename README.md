@@ -1,6 +1,6 @@
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
+- [📗 Table of Contents](#-table-of-contents)
 - [📖 Rail Blog App ](#-rail-blog-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -103,6 +103,7 @@ Check http://localhost:3000/ in your browser
 - To run models tests
 
 ```bash
+rails db:migrate RAILS_ENV=test
 rspec
 ```
 

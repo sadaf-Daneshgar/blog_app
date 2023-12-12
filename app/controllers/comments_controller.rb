@@ -7,11 +7,11 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @post.comments.build(comment_params.merge(user_id: current_user.id))
+    @comment = @post.comments.build(comment_params.merge(author_id: current_user.id))
 
     if @comment.save
       flash[:success] = 'Comment saved successfully'
-      redirect_back_or_default(user_post_comments_path(@user, @post))
+      redirect_back_or_default(user_post_path(@user, @post))
     else
       flash.now[:error] = 'Error: Comment could not be saved'
       render :new
