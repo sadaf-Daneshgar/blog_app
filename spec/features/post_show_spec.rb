@@ -11,6 +11,14 @@ RSpec.describe 'Post show page', type: :feature do
   end
 
   describe 'Post show page' do
+    it 'displays post title' do
+      expect(page).to have_content(post.title)
+    end
+
+    it 'displays post author name' do
+      expect(page).to have_content(post.author.name)
+    end
+
     it 'displays post text' do
       expect(page).to have_content(post.text)
     end
