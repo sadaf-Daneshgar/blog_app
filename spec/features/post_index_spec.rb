@@ -28,6 +28,10 @@ RSpec.describe 'PostIndex', type: :feature do
     end
   end
 
+  it 'Shows how many likes post has' do
+    expect(page).to have_content(post.likes_counter)
+  end
+
   describe 'Posts section in user posts index' do
     it 'Shows post heading' do
       expect(page).to have_content('Post📝')
