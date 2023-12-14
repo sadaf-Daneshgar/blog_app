@@ -6,8 +6,8 @@ class PostsController < ApplicationController
     @posts = @user.posts.includes(:comments)
 
     respond_to do |format|
-      format.html { render :index }
       format.json { render json: @posts }
+      format.html { render :index }
     end
   end
 
