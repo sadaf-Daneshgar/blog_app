@@ -60,7 +60,6 @@ class CommentsController < ApplicationController
 
     token = request.headers['Authorization'].split.last
     @api_user = User.find_by(token:)
-    p 'token: ', token, 'api_user: ', @api_user
   end
 
   def comment_params
