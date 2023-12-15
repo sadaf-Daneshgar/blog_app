@@ -13,6 +13,18 @@ Rails.application.routes.draw do
     end
   end
 
+  post "users/:id/generate_token" => "users#generate_token", as: :generate_token
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :users, only: [] do
+        resources :posts, only: [:index, :create] do
+          resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
