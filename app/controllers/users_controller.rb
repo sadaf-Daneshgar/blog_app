@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = 'Token generated successfully'
     else
-      flash[:error] = 'Error: Token could not be generated'
+      flash[:error] = @user.errors.full_messages.join(', ')
     end
     redirect_to user_path(@user)
   end

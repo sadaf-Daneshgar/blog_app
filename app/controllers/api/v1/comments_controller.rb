@@ -1,6 +1,6 @@
 class Api::V1::CommentsController < ApplicationController
-  before_action :set_user_and_post, only: %i[new create]
-  before_action :set_api_user, only: %i[create]
+  before_action :set_user_and_post, only: %i[create]
+
   load_and_authorize_resource
 
   def index
@@ -9,11 +9,7 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
-    @comment = if @api_user
-                 @post.comments.build(comment_params.merge(author_id: @api_user.id))
-               else
-                 @post.comments.build(comment_params.merge(author_id: current_user.id))
-               end
+    @comment = @post.comments.build(comment_params.merge(author_id: @user.id))
 
     if @comment.save
       render json: @comment, status: :created
@@ -29,7 +25,10 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def set_user_and_post
-    @user = User.includes(posts: :comments).find(params[:user_id])
+    return if request.headers['Authorization'].nil?
+
+    token = request.headers['Authorization'].split.last
+    @user = User.find_by(token:)
     @post = @user.posts.includes(:comments).find(params[:post_id])
   end
 end

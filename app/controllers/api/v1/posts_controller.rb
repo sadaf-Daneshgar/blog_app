@@ -1,9 +1,9 @@
 class Api::V1::PostsController < ApplicationController
-  before_action :set_user
+  before_action :set_user, only: %i[create]
   load_and_authorize_resource
 
   def index
-    @posts = @user.posts.includes(:comments)
+    @posts = User.find(params[:user_id]).posts.includes(:comments)
     render json: @posts
   end
 
@@ -18,6 +18,13 @@ class Api::V1::PostsController < ApplicationController
   end
 
   private
+
+  def set_user
+    return if request.headers['Authorization'].nil?
+
+    token = request.headers['Authorization'].split.last
+    @user = User.find_by(token:)
+  end
 
   def post_params
     params.require(:post).permit(:title, :text)

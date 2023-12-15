@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root "users#index"
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create, :destroy] do
-      resources :comments, only: [:new, :create, :destroy, :index]
+      resources :comments, only: [:new, :create, :destroy]
       resources :likes, only: [:new, :create]
     end
   end
@@ -16,9 +16,11 @@ Rails.application.routes.draw do
   post "users/:id/generate_token" => "users#generate_token", as: :generate_token
 
   namespace :api, defaults: { format: :json } do
-    resources :users, only: [] do
-      resources :posts, only: [:index, :show] do
-        resources :comments, only: [:index]
+    namespace :v1 do
+      resources :users, only: [] do
+        resources :posts, only: [:index, :create] do
+          resources :comments, only: [:index, :create]
+        end
       end
     end
   end
